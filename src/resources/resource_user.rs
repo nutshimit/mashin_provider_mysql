@@ -10,7 +10,7 @@ pub mod user {
     pub struct Config {
         /// The source host of the user.
         ///
-        /// @default "localhost"
+        /// @example "localhost"
         pub(crate) host: Option<String>,
         /// The password for the user. This must be provided in plain text, so the data source for it must be secured.
         ///
