@@ -1,23 +1,27 @@
-# Mashin Provider Starter
+# MySQL Provider
 
-The Mashin Provider Starter is a Rust-based starter kit that provides a simple, clean foundation for building provider plugins for the Mashin platform. This project is designed to help developers get up and running quickly with the Mashin SDK, so that they can start building high-quality providers that integrate with the engine.
+This provider is designed to help you manage resources in a MySQL server within your infrastructure, all with the robustness and convenience of Mashin.
 
-This project is currently **under active development** and is intended to be a proof of concept. As such, it may change at any time and should not be used in production environments.
+## Introduction to MySQL
 
-To get started, simply clone the repository using the following command:
+MySQL is a renowned open-source relational database management system (RDBMS). It's known for its reliability, flexibility, and compliance with the SQL (Structured Query Language) standard. MySQL uses a client-server model, meaning it consists of a database server (MySQL Server) and several different client programs. It's a central component of the LAMP (Linux, Apache, MySQL, Perl/PHP/Python) open-source web application software stack.
 
-```bash
-git clone https://github.com/nutshimit/mashin-provider-starter
+MySQL is employed for a wide range of applications, including data warehousing, e-commerce, and logging applications. However, its most common use case is for web databases. It can store anything from a single record of information to an entire inventory of available products for an online store.
+
+## Mashin MySQL Provider
+
+The Mashin MySQL Provider allows you to manage MySQL resources using the same declarative approach as Mashin. By treating infrastructure as code, you can version control not only your application code but also your databases, leading to an increase in the reproducibility and traceability of changes.
+
+This provider exposes resources used to interact with a MySQL server, such as creating and managing databases, users, permissions, and so forth. It allows for a high degree of automation in managing these resources, making it easier to build, change, and version your MySQL infrastructure.
+
+## Usage
+
+To use the Mashin MySQL Provider, you simply import it into your Mashin scripts.
+
+```ts
+import * as mysql from "https://mashin.run/mysql@0.0.0/mod.ts";
 ```
 
-If you have any questions or concerns about the mod.ts file or its relationship to the src/lib.rs file, please consult the documentation or reach out to the project maintainers for assistance.
+Remember, as with all Mashin providers, the ultimate goal is to facilitate your Infrastructure as Code (IaC) approach. 
 
-Once you've cloned the repository, you can open the `src/lib.rs` file to start building your provider plugin. This file provides a basic implementation of the provider plugin API, along with some sample code that demonstrates how to interact with the Mashin platform.
-
-The SDK is designed to be easy to use and flexible, so that you can customize it to meet your specific needs. You can add additional functionality to your provider by leveraging Rust's powerful libraries and frameworks, or by implementing custom logic that integrates with other tools in your workflow.
-
-## Typescript bindings
-
-Please note that the `mod.ts` file included in this project is generated automatically from the struct defined in the `src/lib.rs` file. As such, it should not be edited directly. Instead, any changes you make to the struct in the code, should be automatically reflected in the `mod.ts` file.
-
-This separation of concerns helps to ensure that the project remains easy to maintain and consistent across different components. It also helps to reduce the risk of errors or conflicts that might arise from manual editing of the mod.ts file.
+Enjoy the simplicity and power of Mashin and the MySQL provider in making your database infrastructure management tasks more efficient and reliable.
