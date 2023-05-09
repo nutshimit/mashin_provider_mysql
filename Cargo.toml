@@ -1,8 +1,8 @@
 [package]
-name = "mashin_provider_starter"
+name = "mashin_provider_mysql"
 version = "0.1.1"
 edition = "2021"
-repository = "https://github.com/nutshimit/mashin_provider_starter"
+repository = "https://github.com/nutshimit/mashin_provider_mysql"
 
 [lib]
 crate-type = ["cdylib"]
@@ -11,6 +11,9 @@ crate-type = ["cdylib"]
 log = "0.4.17"
 mashin_sdk = "0.1"
 serde = { version = "1", features = ["derive"] }
+
+regex = "1.8.1"
+mysql = "23.0.1"
 
 [build-dependencies]
 mashin_sdk = "0.1"
