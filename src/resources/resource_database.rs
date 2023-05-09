@@ -13,7 +13,7 @@ pub mod database {
     pub struct Config {
         /// The default character set to use when a table is created without specifying an explicit character set.
         ///
-        /// @default "utf8"
+        /// @example "utf8"
         pub(crate) default_character_set: Option<String>,
     }
 
