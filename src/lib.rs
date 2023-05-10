@@ -2,6 +2,9 @@ use resources::{database, user};
 mod resources;
 
 mashin_sdk::construct_provider!(
+    /// This provider is designed to help you manage resources in a [MySQL](https://www.mysql.com/)
+    /// server within your infrastructure, all with the robustness and convenience
+    /// of Mashin.
     mysql_provider,
     config = {
         /// This is the connection endpoint.
